@@ -30,6 +30,7 @@ button{
     cursor: pointer;
     transform: rotateX(70deg) rotateZ(30deg);
     transform-style: preserve-3d;
+    transition: transform .5s;
 }
 
 button::before{
@@ -54,4 +55,8 @@ button::after{
     right: 0;
     transform: rotateY(-90deg);
     transform-origin: right;
+}
+
+button:hover{
+    transform: rotateX(30deg) rotateZ(0);
 }
