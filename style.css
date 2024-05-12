@@ -1,1 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.8)),url(images/bg.jpeg) center no-repeat;
+    perspective: 1000px;
+}
+
+button{
+    width: 350px;
+    height: 100px;
+    background: linear-gradient(#853916,#6b3019);
+    border: none;
+    outline: none;
+    font-size: 35px;
+    font-family: "Slabo 27px", serif;
+    letter-spacing: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 10px 10px #000;
+    cursor: pointer;
+    transform: rotateX(70deg) rotateZ(30deg);
+    transform-style: preserve-3d;
+}
+
+button::before{
+    content: '';
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    background-color: #6b3019;
+    bottom: 0;
+    right: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
+
+button::after{
+    content: '';
+    width: 15px;
+    height: 100%;
+    position: absolute;
+    background-color: #853916;
+    top: 0;
+    right: 0;
+    transform: rotateY(-90deg);
+    transform-origin: right;
+}
